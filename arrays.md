@@ -63,7 +63,7 @@ for (int i = 0; i < 10; i++) {
 
 ---
 
-### **3.2 `array.length`**
+### **`array.length`**
 A propriedade `length` de um array indica seu tamanho (quantidade de elementos). Isso evita escrever números fixos (hard-coded):
 
 ```java
