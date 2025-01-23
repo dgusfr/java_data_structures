@@ -87,7 +87,7 @@ for (int valor : idades) {
 
 ---
 
-## **4. Arrays de Tipos Primitivos vs. Arrays de Objetos**
+## **Arrays de Tipos Primitivos vs. Arrays de Objetos**
 
 ### **4.1 Arrays de Tipos Primitivos**
 Cada posição armazena diretamente um valor primitivo.
