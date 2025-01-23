@@ -42,7 +42,7 @@ System.out.println(saldosDasContas[5]); // Imprime: 500.0
 
 ---
 
-## **3. Populando e Percorrendo Arrays**
+## ** Populando e Percorrendo Arrays**
 
 ### **3.1 Percorrendo com `for` Tradicional**
 Se criarmos um array de tamanho 10, podemos percorrê-lo com índices de 0 até 9:
