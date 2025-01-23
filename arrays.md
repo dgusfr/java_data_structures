@@ -15,7 +15,7 @@ Neste tópico, veremos:
 
 ---
 
-## **2. Declaração e Instanciação**
+## **Declaração e Instanciação**
 Para usar um array em Java, você precisa:
 1. **Declarar** uma variável de array, especificando o tipo de elemento que ele armazenará.
 2. **Instanciar** (criar) o objeto array, definindo seu tamanho (número de elementos).
