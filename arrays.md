@@ -20,6 +20,7 @@ Para usar um array em Java, você precisa:
 1. **Declarar** uma variável de array, especificando o tipo de elemento que ele armazenará.
 2. **Instanciar** (criar) o objeto array, definindo seu tamanho (número de elementos).
 
+
 ### **Exemplo de Array de `double`**
 ```java
 double[] saldosDasContas;  // Declaração: array de double
