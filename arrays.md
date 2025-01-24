@@ -6,7 +6,6 @@ Em Java, arrays são estruturas que permitem armazenar várias variáveis (de me
 Neste tópico, veremos:
 - Declaração e instanciação de arrays.
 - Como preencher (popular) e percorrer arrays.
-- Arrays de tipos primitivos e de referências (objetos).
 
 
 <br>
