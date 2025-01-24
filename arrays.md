@@ -115,6 +115,7 @@ minhasContas = new ContaCorrente[10];
 <img src="images/mycounts.png" alt="Java" width="300">
 
 **Exemplo:**
+
 ```java
 minhasContas[0] = new ContaCorrente();
 minhasContas[0].deposita(1000.0);
