@@ -200,6 +200,7 @@ contas[2] = null;
 2. **Heap:**
    - Armazena o objeto `contas` (o array em si).
    - Cada objeto `Conta` é alocado separadamente na heap.
+     
 
 **Memória após execução:**
 ```plaintext
