@@ -165,6 +165,7 @@ Em Java, **arrays com referência a objetos** utilizam memória de forma dividid
 
 ---
 
+
 ## **1. Stack e Heap**
 
 - **Stack:**  
