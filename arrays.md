@@ -7,7 +7,7 @@ Neste tópico, veremos:
 - Declaração e instanciação de arrays.
 - Como preencher (popular) e percorrer arrays.
 - Arrays de tipos primitivos e de referências (objetos).
-- Boas práticas e exercícios para consolidar os conceitos.
+
 
 <br>
 
