@@ -4,7 +4,6 @@
 Em Java, arrays são estruturas que permitem armazenar várias variáveis (de mesmo tipo) em uma única referência. Eles têm **tamanho fixo**, e cada elemento é acessado por meio de um índice.
 
 Neste tópico, veremos:
-- Declaração e instanciação de arrays.
 
 
 <br>
