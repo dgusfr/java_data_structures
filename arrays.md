@@ -234,6 +234,7 @@ conta1 ------------>  Objeto Conta
 
 ---
 
+
 ## **4. Vantagens**
 - **Acesso eficiente:** A referência do array na stack permite rápido acesso ao objeto na heap.
 - **Memória dinâmica:** A heap armazena os objetos reais, permitindo alocação flexível e compartilhamento de referências.
