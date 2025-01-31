@@ -56,7 +56,6 @@ for (int i = 0; i < 10; i++) {
 }
 ```
 
----
 
 ### **`array.length`**
 A propriedade `length` de um array indica seu tamanho (quantidade de elementos). Isso evita escrever números fixos (hard-coded):
