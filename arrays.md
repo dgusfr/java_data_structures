@@ -154,8 +154,6 @@ numeros = numerosMaior;
 
 Em Java, **arrays com referência a objetos** utilizam memória de forma dividida entre a **stack** e a **heap**. Essa separação é essencial para compreender como a linguagem gerencia objetos e arrays dinamicamente.
 
----
-
 
 ## **Stack e Heap**
 
