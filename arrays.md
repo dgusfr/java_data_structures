@@ -66,7 +66,6 @@ for (int i = 0; i < idades.length; i++) {
 }
 ```
 
----
 
 ### **Percorrendo com o Enhanced `for` (Java 5+)**
 O chamado “**for aprimorado**” simplifica o acesso aos elementos quando não precisamos do índice:
