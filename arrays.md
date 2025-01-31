@@ -127,7 +127,7 @@ contas[1] = new ContaPoupanca();
 
 ---
 
-## **5. Tamanho Fixo e Redimensionamento**
+## **Tamanho Fixo e Redimensionamento**
 O tamanho de um array é fixo e definido no momento da criação. Para "redimensionar", você deve criar um novo array maior e copiar os valores do array antigo.
 
 ### **Exemplo:**
