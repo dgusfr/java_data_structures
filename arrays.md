@@ -167,7 +167,7 @@ Em Java, **arrays com referência a objetos** utilizam memória de forma dividid
 
 ---
 
-## **2. Organização da Memória**
+## **Organização da Memória**
 
 ### **Referências no Array**
 Cada posição de um array de objetos armazena uma referência para um objeto na heap.
