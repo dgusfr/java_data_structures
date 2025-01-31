@@ -92,7 +92,6 @@ numeros[1] = 20;
 numeros[2] = 30;
 ```
 
----
 
 ### **Arrays de Objetos (Referências)**
 Quando declaramos um array de objetos, cada posição armazena uma **referência**. Antes de atribuir um objeto, ela contém `null`.
