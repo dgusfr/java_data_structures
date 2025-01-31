@@ -199,7 +199,7 @@ Ref2 ------------->   Objeto Conta (atributos)
 
 ---
 
-## **3. Atributos dos Objetos**
+## **Atributos dos Objetos**
 Dentro da heap, os atributos dos objetos (como valores primitivos ou outras referências) também ocupam espaço.
 
 Exemplo:
