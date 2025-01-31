@@ -94,7 +94,7 @@ numeros[2] = 30;
 
 ---
 
-### **4.2 Arrays de Objetos (Referências)**
+### **Arrays de Objetos (Referências)**
 Quando declaramos um array de objetos, cada posição armazena uma **referência**. Antes de atribuir um objeto, ela contém `null`.
 
 ```java
