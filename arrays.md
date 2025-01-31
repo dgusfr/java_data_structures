@@ -228,7 +228,7 @@ conta1 ------------>  Objeto Conta
 
 ---
 
-## **5. Resumo**
+## **Resumo**
 - Arrays em Java dividem o uso de memória entre **stack** (referências e variáveis locais) e **heap** (objetos e dados).
 - Cada posição do array armazena uma referência que aponta para um objeto na heap.
 - Essa abordagem otimiza o uso de memória dinâmica, combinando acesso rápido às referências e armazenamento eficiente dos dados.
