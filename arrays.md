@@ -165,7 +165,6 @@ Em Java, **arrays com referência a objetos** utilizam memória de forma dividid
   - Armazena o **array em si** e os **objetos associados**.
   - É a região da memória usada para alocação dinâmica, com maior capacidade.
 
----
 
 ## **Organização da Memória**
 
