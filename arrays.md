@@ -115,9 +115,8 @@ System.out.println(minhasContas[0].getSaldo()); // 1000.0
 
 ⚠️ **Cuidado:** Tentar acessar `minhasContas[1]` antes de atribuir um objeto resultará em uma **`NullPointerException`**.
 
----
 
-### **4.3 Arrays com Herança**
+### **Arrays com Herança**
 Podemos armazenar diferentes tipos de conta (ex.: `ContaCorrente`, `ContaPoupanca`) em um array do tipo da classe-mãe ou interface, permitindo armazenar subclasses:
 
 ```java
