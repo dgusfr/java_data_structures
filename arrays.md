@@ -157,7 +157,7 @@ Em Java, **arrays com referência a objetos** utilizam memória de forma dividid
 ---
 
 
-## **1. Stack e Heap**
+## **Stack e Heap**
 
 - **Stack:**  
   - Armazena **referências** do array e variáveis locais, como o tamanho do array.
