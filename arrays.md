@@ -141,8 +141,6 @@ numeros = numerosMaior;
 
 # Memória em Arrays de Java
 
-<br>
-
 ## 1. Stack e Heap
 
 - **Stack:**  
@@ -156,6 +154,9 @@ numeros = numerosMaior;
 ## 2. Organização da Memória
 
 ### Referências no Array
+
+<img src="images/array.png" alt="Representação de um array em Java" width="500">
+
 Cada posição em um array de objetos aponta para um objeto na Heap ou permanece `null`.
 
 ```java
