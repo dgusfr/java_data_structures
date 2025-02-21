@@ -44,6 +44,8 @@ System.out.println(saldosDasContas[5]); // 500.0
 ```
 > **Atenção:** Índices inválidos (ex.: `saldosDasContas[10]`) geram `ArrayIndexOutOfBoundsException`.
 
+<br>
+
 ---
 
 ## 3. Populando e Percorrendo Arrays
@@ -79,6 +81,8 @@ for (int valor : idades) {
     System.out.println(valor);
 }
 ```
+
+<br>
 
 ---
 
