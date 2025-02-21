@@ -199,11 +199,3 @@ Ref1  ------------>   Objeto Conta (#2)
 4. Para manipular muitos dados de forma dinâmica, considere coleções como `ArrayList`.
 
 ---
-
-**Conclusão:**  
-- Arrays facilitam o armazenamento sequencial de dados.  
-- São úteis para manipular coleções de tamanho conhecido.  
-- Para redimensionar, é preciso criar um novo array.  
-- Em projetos reais, `ArrayList` e outras coleções são preferidas quando o tamanho pode variar.  
-
-A compreensão do **arranjo** (array) e do gerenciamento de memória (Stack e Heap) é fundamental para um código seguro e eficiente em Java.
