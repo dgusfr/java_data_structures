@@ -144,6 +144,8 @@ numeros = numerosMaior;
 ```
 > Em muitos casos, preferimos estruturas de **coleção** (ex.: `ArrayList`, `HashSet`) que crescem dinamicamente.
 
+<br>
+
 ---
 
 # Memória em Arrays de Java
