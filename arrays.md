@@ -155,7 +155,7 @@ numeros = numerosMaior;
 
 ### Referências no Array
 
-<img src="images/array.png" alt="Representação de um array em Java" width="500">
+<img src="images/memory.png.png" alt="Representação de um array em Java" width="500">
 
 Cada posição em um array de objetos aponta para um objeto na Heap ou permanece `null`.
 
