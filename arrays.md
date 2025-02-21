@@ -1,92 +1,89 @@
 # Arrays em Java
 
-## **Introdução**
-Em Java, arrays são estruturas que permitem armazenar várias variáveis (de mesmo tipo) em uma única referência. Eles têm **tamanho fixo**, e cada elemento é acessado por meio de um índice.
+Em Java, **arrays** são estruturas homogêneas (mesmo tipo) que armazenam diversos elementos usando uma única referência. São **contíguos na memória**, de **tamanho fixo** e **indexados** a partir de 0.
 
 <br>
 
-<img src="images/array.png" alt="Java" width="500">
+<img src="images/array.png" alt="Representação de um array em Java" width="500">
 
 ---
 
-## **Declaração e Instanciação**
-Para usar um array em Java, você precisa:
-1. **Declarar** uma variável de array, especificando o tipo de elemento que ele armazenará.
-2. **Instanciar** (criar) o objeto array, definindo seu tamanho (número de elementos).
+## 1. Motivação
 
-
-### **Exemplo de Array de `double`**
+Sem arrays, teríamos que armazenar dados em várias variáveis separadas:
 ```java
-double[] saldosDasContas;  // Declaração: array de double
-saldosDasContas = new double[10];  // Instanciação: 10 posições (índices 0 a 9)
+double saldoConta1 = conta1.getSaldo();
+double saldoConta2 = conta2.getSaldo();
+double saldoConta3 = conta3.getSaldo();
 ```
-
-- `saldosDasContas` é uma variável de referência para um objeto array de `double`.
-- Após `new double[10]`, esse array terá **10 elementos**, cada um inicialmente com valor `0.0`.
-
-### **Acessando Elementos**
-Podemos ler e escrever os elementos usando o índice (começando em 0):
-
-```java
-saldosDasContas[0] = 1000.0;   
-saldosDasContas[5] = 500.0;    
-System.out.println(saldosDasContas[5]); // Imprime: 500.0
-```
-
-⚠️ **Cuidado:** Tentar acessar um índice inválido (ex.: `saldosDasContas[10]`) resulta em uma **`ArrayIndexOutOfBoundsException`** em tempo de execução.
+Isso é pouco prático. Com arrays, unificamos as variáveis em uma única estrutura.
 
 ---
 
-## **Populando e Percorrendo Arrays**
+## 2. Declaração e Instanciação
 
-### **Percorrendo com `for` Tradicional**
-Se criarmos um array de tamanho 10, podemos percorrê-lo com índices de 0 até 9:
+Para usar arrays:
+1. **Declarar** a variável de array, informando o tipo dos elementos.
+2. **Instanciar** o objeto array, definindo quantas posições ele terá.
 
+### Exemplo de Array de `double`
+```java
+double[] saldosDasContas;          // Declaração
+saldosDasContas = new double[10];  // Instancia 10 posições (índices 0 a 9)
+```
+- `saldosDasContas` é uma **referência** a um objeto array de `double`.
+- Cada posição começa com valor **0.0**.
+
+### Acessando Elementos
+```java
+saldosDasContas[0] = 1000.0;
+saldosDasContas[5] = 500.0;
+System.out.println(saldosDasContas[5]); // 500.0
+```
+> **Atenção:** Índices inválidos (ex.: `saldosDasContas[10]`) geram `ArrayIndexOutOfBoundsException`.
+
+---
+
+## 3. Populando e Percorrendo Arrays
+
+### 3.1 For Tradicional
+Se o array tiver 10 posições, elas vão de `0` a `9`:
 ```java
 int[] idades = new int[10];
 
-// Preenche o array
+// Atribuindo valores
 for (int i = 0; i < 10; i++) {
     idades[i] = i * 10;
 }
 
-// Imprime os elementos
+// Exibindo valores
 for (int i = 0; i < 10; i++) {
     System.out.println(idades[i]);
 }
 ```
 
----
-
-### **`array.length`**
-A propriedade `length` de um array indica seu tamanho (quantidade de elementos). Isso evita escrever números fixos (hard-coded):
-
+### 3.2 Propriedade `length`
+Use `array.length` para obter o tamanho do array, evitando valores “hard-coded”:
 ```java
 for (int i = 0; i < idades.length; i++) {
     System.out.println(idades[i]);
 }
 ```
 
----
-
-### **Percorrendo com o Enhanced `for` (Java 5+)**
-O chamado “**for aprimorado**” simplifica o acesso aos elementos quando não precisamos do índice:
-
+### 3.3 Enhanced `for` (Java 5+)
+Forma simplificada de iterar quando o índice não é necessário:
 ```java
 for (int valor : idades) {
     System.out.println(valor);
 }
 ```
 
-> Internamente, o enhanced `for` é apenas uma forma mais simples de iterar sobre todos os elementos.
-
 ---
 
-## **Arrays de Tipos Primitivos vs. Arrays de Objetos**
+## 4. Arrays de Tipos Primitivos vs. Arrays de Objetos
 
-### **Arrays de Tipos Primitivos**
-Cada posição armazena diretamente um valor primitivo.
-
+### 4.1 Arrays de Tipos Primitivos
+Cada posição guarda diretamente o valor:
 ```java
 int[] numeros = new int[3];
 numeros[0] = 10;
@@ -94,152 +91,109 @@ numeros[1] = 20;
 numeros[2] = 30;
 ```
 
----
-
-### **4.2 Arrays de Objetos (Referências)**
-Quando declaramos um array de objetos, cada posição armazena uma **referência**. Antes de atribuir um objeto, ela contém `null`.
+### 4.2 Arrays de Objetos (Referências)
+Cada posição armazena uma **referência** a um objeto na **Heap**. Antes de atribuir, é `null`.
 
 ```java
-ContaCorrente[] minhasContas;
-minhasContas = new ContaCorrente[10];
-```
-
-- Neste ponto, nenhuma `ContaCorrente` foi criada ainda. O array contém **10 referências nulas**.
-
-<img src="images/mycounts.png" alt="Java" width="300">
-
-**Exemplo:**
-
-```java
+ContaCorrente[] minhasContas = new ContaCorrente[10];
 minhasContas[0] = new ContaCorrente();
 minhasContas[0].deposita(1000.0);
-System.out.println(minhasContas[0].getSaldo()); // 1000.0
 ```
+> Se tentarmos `minhasContas[1].getSaldo()` sem atribuir um objeto, ocorre `NullPointerException`.
 
-⚠️ **Cuidado:** Tentar acessar `minhasContas[1]` antes de atribuir um objeto resultará em uma **`NullPointerException`**.
+<br>
+
+<img src="images/mycounts.png" alt="Array de contas" width="300">
 
 ---
 
-### **4.3 Arrays com Herança**
-Podemos armazenar diferentes tipos de conta (ex.: `ContaCorrente`, `ContaPoupanca`) em um array do tipo da classe-mãe ou interface, permitindo armazenar subclasses:
-
+## 5. Arrays com Herança
+Podemos usar um array do tipo da classe-mãe (`Conta`) para armazenar subclasses:
 ```java
 Conta[] contas = new Conta[10];
 contas[0] = new ContaCorrente();
 contas[1] = new ContaPoupanca();
 ```
+Cada posição guarda uma referência que aponta para um tipo específico de `Conta`.
 
 ---
 
-## **5. Tamanho Fixo e Redimensionamento**
-O tamanho de um array é fixo e definido no momento da criação. Para "redimensionar", você deve criar um novo array maior e copiar os valores do array antigo.
+## 6. Tamanho Fixo e Redimensionamento
 
-### **Exemplo:**
+O tamanho do array é definido ao criar com `new`. Para “aumentar”:
+1. Crie um novo array maior.
+2. Copie os elementos do array antigo.
+3. Atribua a nova referência.
+
 ```java
 int[] numeros = new int[5];
-
-// Criar um novo array maior
 int[] numerosMaior = new int[10];
 
-// Copiar elementos
 for (int i = 0; i < numeros.length; i++) {
     numerosMaior[i] = numeros[i];
 }
 
-// Substituir a referência
 numeros = numerosMaior;
 ```
-
-> Em aplicações modernas, é comum usar coleções como `ArrayList` ou `HashSet`, que se ajustam dinamicamente, ao invés de manipular arrays diretamente.
+> Em muitos casos, preferimos estruturas de **coleção** (ex.: `ArrayList`, `HashSet`) que crescem dinamicamente.
 
 ---
 
 # Memória em Arrays de Java
 
-Em Java, **arrays com referência a objetos** utilizam memória de forma dividida entre a **stack** e a **heap**. Essa separação é essencial para compreender como a linguagem gerencia objetos e arrays dinamicamente.
+<br>
 
----
-
-
-## **1. Stack e Heap**
+## 1. Stack e Heap
 
 - **Stack:**  
-  - Armazena **referências** do array e variáveis locais, como o tamanho do array.
-  - Possui acesso rápido e é usada para dados de curto prazo.
-  
+  Armazena variáveis locais e referências (incluindo a referência do array e o tamanho).
+
 - **Heap:**  
-  - Armazena o **array em si** e os **objetos associados**.
-  - É a região da memória usada para alocação dinâmica, com maior capacidade.
+  Armazena o **array em si** (com suas posições) e os **objetos** que cada posição referência.
 
 ---
 
-## **2. Organização da Memória**
+## 2. Organização da Memória
 
-### **Referências no Array**
-Cada posição de um array de objetos armazena uma referência para um objeto na heap.
+### Referências no Array
+Cada posição em um array de objetos aponta para um objeto na Heap ou permanece `null`.
 
-Exemplo:
 ```java
 Conta[] contas = new Conta[3];
 contas[0] = new Conta();
 contas[1] = new Conta();
 contas[2] = null;
 ```
+**Visão de Memória:**
+- **Stack:** mantém a variável `contas` (referência ao array) e as variáveis locais.
+- **Heap:** contém o array `contas` (3 posições) e os objetos `Conta`.
 
-### **Distribuição na Memória**
-1. **Stack:**
-   - Armazena a referência do array `contas`.
-   - Cada posição do array aponta para um endereço na heap ou contém `null`.
+---
 
-2. **Heap:**
-   - Armazena o objeto `contas` (o array em si).
-   - Cada objeto `Conta` é alocado separadamente na heap.
-     
+## 3. Exemplo Visual
 
-**Memória após execução:**
 ```plaintext
-Stack:                Heap:
-contas ------------>  [Ref1, Ref2, null]
-Ref1 ------------->   Objeto Conta (atributos)
-Ref2 ------------->   Objeto Conta (atributos)
+Stack:                 Heap:
+contas  ---------->  [Ref0, Ref1, null]
+Ref0  ------------>   Objeto Conta (#1)
+Ref1  ------------>   Objeto Conta (#2)
 ```
 
 ---
 
-## **3. Atributos dos Objetos**
-Dentro da heap, os atributos dos objetos (como valores primitivos ou outras referências) também ocupam espaço.
+## 4. Resumo Geral
 
-Exemplo:
-```java
-class Conta {
-    String titular;
-    double saldo;
-}
-Conta conta1 = new Conta();
-conta1.titular = "Duke";
-conta1.saldo = 1000.0;
-```
-
-**Memória:**
-```plaintext
-Stack:                Heap:
-conta1 ------------>  Objeto Conta
-                      | titular: "Duke" (Heap)
-                      | saldo: 1000.0 (Primitivo)
-```
+1. Arrays são **estruturas fixas** para guardar elementos homogêneos.  
+2. Cada posição do array de objetos guarda uma **referência** ou `null`.  
+3. O array e seus objetos vivem na **Heap**; a variável que aponta para o array fica na **Stack**.  
+4. Para manipular muitos dados de forma dinâmica, considere coleções como `ArrayList`.
 
 ---
 
+**Conclusão:**  
+- Arrays facilitam o armazenamento sequencial de dados.  
+- São úteis para manipular coleções de tamanho conhecido.  
+- Para redimensionar, é preciso criar um novo array.  
+- Em projetos reais, `ArrayList` e outras coleções são preferidas quando o tamanho pode variar.  
 
-## **4. Vantagens**
-- **Acesso eficiente:** A referência do array na stack permite rápido acesso ao objeto na heap.
-- **Memória dinâmica:** A heap armazena os objetos reais, permitindo alocação flexível e compartilhamento de referências.
-
----
-
-## **5. Resumo**
-- Arrays em Java dividem o uso de memória entre **stack** (referências e variáveis locais) e **heap** (objetos e dados).
-- Cada posição do array armazena uma referência que aponta para um objeto na heap.
-- Essa abordagem otimiza o uso de memória dinâmica, combinando acesso rápido às referências e armazenamento eficiente dos dados.
-
- ---
+A compreensão do **arranjo** (array) e do gerenciamento de memória (Stack e Heap) é fundamental para um código seguro e eficiente em Java.
