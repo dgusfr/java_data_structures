@@ -121,6 +121,8 @@ contas[1] = new ContaPoupanca();
 ```
 Cada posição guarda uma referência que aponta para um tipo específico de `Conta`.
 
+<br>
+
 ---
 
 ## 6. Tamanho Fixo e Redimensionamento
