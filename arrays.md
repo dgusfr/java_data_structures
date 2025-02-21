@@ -107,10 +107,9 @@ minhasContas[0].deposita(1000.0);
 ```
 > Se tentarmos `minhasContas[1].getSaldo()` sem atribuir um objeto, ocorre `NullPointerException`.
 
-<br>
-
 <img src="images/mycounts.png" alt="Array de contas" width="300">
 
+<br>
 ---
 
 ## 5. Arrays com Herança
