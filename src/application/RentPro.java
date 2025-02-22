@@ -21,14 +21,13 @@ public class RentPro {
 			System.out.println("Rent #" + i + ":");
 			System.out.println("Name:");
 			sc.nextLine();
-			String name = sc.nextLine();
+			String name = sc.nextLine();	
 			System.out.println("Email:");
-			String email = sc.next();
+			String email = sc.next();	
 			System.out.println("Quartos:");
-			String roomNumber = sc.next();
+			int roomNumber = sc.nextInt();	
 			
-			Rent rent = new Rent(name, email);
-			
+			vect[roomNumber] = new Rent(name, email);
 		}
 		
 		Rent r = new Rent("Maria", "maria@email.com");
