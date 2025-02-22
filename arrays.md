@@ -192,11 +192,183 @@ Ref1  ------------>   Objeto Conta (#2)
 
 ---
 
-## 4. Resumo Geral
+# **Boxing, Unboxing e Wrapper Classes em Java**
 
-1. Arrays são **estruturas fixas** para guardar elementos homogêneos.  
-2. Cada posição do array de objetos guarda uma **referência** ou `null`.  
-3. O array e seus objetos vivem na **Heap**; a variável que aponta para o array fica na **Stack**.  
-4. Para manipular muitos dados de forma dinâmica, considere coleções como `ArrayList`.
+## **Introdução**
+Em Java, existem dois tipos de dados principais:
+- **Tipos primitivos:** Dados simples como `int`, `double`, `char`, `boolean`, entre outros.
+- **Tipos referência:** Objetos e instâncias de classes.
+
+Por padrão, os tipos primitivos são mais eficientes em termos de desempenho e memória, mas não oferecem os recursos da Programação Orientada a Objetos (POO). Para trabalhar com esses recursos, o Java disponibiliza as **wrapper classes**, que encapsulam tipos primitivos em objetos.
+
+## **1. Boxing**
+
+### **O que é?**
+O **Boxing** é o processo de conversão automática de um **tipo primitivo** para o seu **tipo referência correspondente** (ou seja, uma **wrapper class**). Isso permite que tipos primitivos sejam tratados como objetos.
+
+### **Como funciona na memória?**
+
+- **Stack:** Armazena variáveis locais e referências.
+- **Heap:** Armazena objetos e instâncias.
+
+<img src="images/boxing.png" alt="Representação de um array em Java" width="500">
+
+
+No exemplo acima:
+- `x` (20) está armazenado na **Stack**.
+- `obj` é uma referência que aponta para um objeto `Integer` armazenado na **Heap**, que contém o valor 20.
+
+**Representação na memória:**
+
+```
+Stack            Heap
+-----            -----
+x: 20      --->  Integer(20)
+obj ------^
+```
+
+### **Quando é usado?**
+- Ao adicionar tipos primitivos em coleções que aceitam apenas objetos (ex.: `ArrayList<Integer>`).
+- Ao passar tipos primitivos para métodos que exigem objetos.
+- Quando precisamos usar recursos da orientação a objetos com tipos primitivos.
 
 ---
+
+## **2. Unboxing**
+
+### **O que é?**
+O **Unboxing** é o processo inverso do boxing: converte um **objeto wrapper** de volta para o seu **tipo primitivo** correspondente.
+
+### **Exemplo de Unboxing:**
+```java
+Integer obj = 20;      // Boxing implícito
+int y = obj;           // Unboxing: converte 'Integer' para 'int'
+```
+
+### **Como funciona na memória?**
+
+- `obj` aponta para um objeto `Integer` na Heap com valor 20.
+- `y` recebe o valor primitivo 20 da Stack.
+
+**Representação na memória:**
+
+```
+Stack            Heap
+-----            -----
+obj ------> Integer(20)
+y: 20
+```
+
+### **Quando é usado?**
+- Ao realizar operações aritméticas com wrapper classes.
+- Ao acessar valores em coleções e atribuí-los a tipos primitivos.
+- Ao passar objetos para métodos que exigem tipos primitivos.
+
+---
+
+## **3. Wrapper Classes**
+
+### **O que são?**
+As **wrapper classes** são classes que encapsulam tipos primitivos em objetos, permitindo que sejam usados em contextos que exigem objetos.
+
+### **Principais Wrapper Classes em Java:**
+
+| Tipo Primitivo | Wrapper Class |
+|----------------|---------------|
+| `byte`         | `Byte`        |
+| `short`        | `Short`       |
+| `int`          | `Integer`     |
+| `long`         | `Long`        |
+| `float`        | `Float`       |
+| `double`       | `Double`      |
+| `char`         | `Character`   |
+| `boolean`      | `Boolean`     |
+
+### **Por que usar Wrapper Classes?**
+
+- **Trabalhar com coleções:** Coleções como `ArrayList`, `HashMap`, e outras só aceitam tipos referência, não tipos primitivos.
+- **Permitir valores `null`:** Diferente dos tipos primitivos, os objetos podem ter valor `null`, útil para representar valores indefinidos.
+- **Utilizar métodos úteis:** Wrapper classes oferecem métodos que facilitam conversões e manipulações.
+
+---
+
+## **4. Exemplo Prático: Uso de Wrapper Classes com Boxing e Unboxing**
+
+### **Código exemplo:**
+```java
+public class Demo {
+    public static void main(String[] args) {
+        Integer x = 10;          // Boxing: int -> Integer
+        int y = x * 2;           // Unboxing automático para multiplicação
+
+        System.out.println("Valor de x (Integer): " + x);
+        System.out.println("Resultado de y (int): " + y);
+    }
+}
+```
+
+**Saída:**
+```
+Valor de x (Integer): 10
+Resultado de y (int): 20
+```
+
+### **Explicação:**
+- `Integer x = 10;`: O valor primitivo `10` é automaticamente convertido em um objeto `Integer` (**Boxing**).
+- `int y = x * 2;`: O objeto `x` é convertido de volta para o tipo primitivo `int` para realizar a multiplicação (**Unboxing**).
+
+---
+
+## **5. Exemplo com Classes e Uso Prático em Sistemas de Informação**
+
+Em aplicações reais, como sistemas de cadastro ou e-commerce, é comum usar wrapper classes em atributos de classes para permitir valores nulos e aproveitar recursos da POO.
+
+### **Exemplo com uma classe `Product`:**
+```java
+public class Product {
+    public String name;
+    public Double price;      // Wrapper permite null e métodos adicionais
+    public Integer quantity;  // Wrapper usado para aceitar valores nulos
+
+    public Product(String name, Double price, Integer quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    public double totalPrice() {
+        return price * quantity;  // Unboxing automático ocorre aqui
+    }
+}
+```
+
+### **Uso da classe:**
+```java
+public class DemoProduct {
+    public static void main(String[] args) {
+        Product p = new Product("Laptop", 1500.00, 2);
+        System.out.println("Total: " + p.totalPrice());
+    }
+}
+```
+
+**Saída:**
+```
+Total: 3000.0
+```
+
+### **Por que usar `Double` e `Integer` em vez de `double` e `int`?**
+
+- **Permitir `null`:** Se o preço ou a quantidade ainda não forem definidos, podemos atribuir `null`, algo impossível com tipos primitivos.
+- **Integração com frameworks:** Bibliotecas de persistência de dados (como JPA) exigem tipos referência para mapear colunas do banco de dados que aceitam `null`.
+
+---
+
+## **6. Resumo**
+
+- **Boxing:** Converte tipos primitivos em objetos (ex.: `int` → `Integer`).
+- **Unboxing:** Converte objetos wrapper em tipos primitivos (ex.: `Integer` → `int`).
+- **Wrapper Classes:** Permitem usar tipos primitivos como objetos, fundamentais para trabalhar com coleções, permitir `null` e utilizar métodos adicionais.
+
+---
+
