@@ -11,6 +11,9 @@ public class RentPro {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
+		System.out.println("Quantos quartos serão reservados?");
+		int n = sc.nextInt();
+		
 		Rent r = new Rent("Maria", "maria@email.com");
 		
 		System.out.println(r);
