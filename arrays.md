@@ -231,11 +231,6 @@ No exemplo acima:
 ### **O que é?**
 O **Unboxing** é o processo inverso do boxing: converte um **objeto wrapper** de volta para o seu **tipo primitivo** correspondente.
 
-### **Exemplo de Unboxing:**
-```java
-Integer obj = 20;      // Boxing implícito
-int y = obj;           // Unboxing: converte 'Integer' para 'int'
-```
 
 ### **Como funciona na memória?**
 
@@ -244,12 +239,8 @@ int y = obj;           // Unboxing: converte 'Integer' para 'int'
 
 **Representação na memória:**
 
-```
-Stack            Heap
------            -----
-obj ------> Integer(20)
-y: 20
-```
+<img src="images/unboxing.png" alt="Representação de um array em Java" width="500">
+
 
 ### **Quando é usado?**
 - Ao realizar operações aritméticas com wrapper classes.
