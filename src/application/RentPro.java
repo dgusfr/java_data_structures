@@ -11,6 +11,9 @@ public class RentPro {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
+		Rent[] vect = new Rent[10];
+		
+		
 		System.out.println("Quantos quartos serão reservados?");
 		int n = sc.nextInt();
 		
