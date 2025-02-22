@@ -251,8 +251,9 @@ O **Unboxing** é o processo inverso do boxing: converte um **objeto wrapper** d
 
 ## **3. Wrapper Classes**
 
-### **O que são?**
 As **wrapper classes** são classes que encapsulam tipos primitivos em objetos, permitindo que sejam usados em contextos que exigem objetos.
+
+![alt text](image.png)
 
 ### **Principais Wrapper Classes em Java:**
 
