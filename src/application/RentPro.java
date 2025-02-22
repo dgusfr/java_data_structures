@@ -30,9 +30,12 @@ public class RentPro {
 			vect[roomNumber] = new Rent(name, email);
 		}
 		
-		Rent r = new Rent("Maria", "maria@email.com");
-		
-		System.out.println(r);
+		System.out.println("Quartos Ocupados:");
+		for (int i = 0; i < 10; i++) {
+			if (vect[i] != null) {
+				System.out.println(i + ": " +  vect[i]);
+			}
+		}
 		
 		sc.close();
 	}
