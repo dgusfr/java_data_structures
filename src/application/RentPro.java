@@ -20,7 +20,15 @@ public class RentPro {
 		for(int i = 1; i <= n; i++) {
 			System.out.println("Rent #" + i + ":");
 			System.out.println("Name:");
-			String name = 
+			sc.nextLine();
+			String name = sc.nextLine();
+			System.out.println("Email:");
+			String email = sc.next();
+			System.out.println("Quartos:");
+			String roomNumber = sc.next();
+			
+			Rent rent = new Rent(name, email);
+			
 		}
 		
 		Rent r = new Rent("Maria", "maria@email.com");
