@@ -218,14 +218,6 @@ No exemplo acima:
 - `x` (20) está armazenado na **Stack**.
 - `obj` é uma referência que aponta para um objeto `Integer` armazenado na **Heap**, que contém o valor 20.
 
-**Representação na memória:**
-
-```
-Stack            Heap
------            -----
-x: 20      --->  Integer(20)
-obj ------^
-```
 
 ### **Quando é usado?**
 - Ao adicionar tipos primitivos em coleções que aceitam apenas objetos (ex.: `ArrayList<Integer>`).
