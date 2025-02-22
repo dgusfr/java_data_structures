@@ -17,6 +17,12 @@ public class RentPro {
 		System.out.println("Quantos quartos serão reservados?");
 		int n = sc.nextInt();
 		
+		for(int i = 1; i <= n; i++) {
+			System.out.println("Rent #" + i + ":");
+			System.out.println("Name:");
+			String name = 
+		}
+		
 		Rent r = new Rent("Maria", "maria@email.com");
 		
 		System.out.println(r);
