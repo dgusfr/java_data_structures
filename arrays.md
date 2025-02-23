@@ -356,7 +356,9 @@ Total: 3000.0
 
 ---
 
-# **Laço "for each" em Java**
+<br>
+
+# **Laço for each**
 
 ## **Introdução**
 
