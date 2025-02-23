@@ -358,7 +358,7 @@ Total: 3000.0
 
 <br>
 
-# **Laço for each**
+# **Laço "for each"**
 
 ## **Introdução**
 
