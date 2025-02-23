@@ -478,15 +478,17 @@ Uma **lista** é uma estrutura de dados que armazena uma coleção de elementos 
 
 ## **2. Interface `List` e Implementações**
 
-Em Java, a **interface `List`** define o comportamento das listas. Ela é implementada por classes como:
+Em Java, a **interface `List`** define o comportamento das listas. 
+Não é possível instanciar o tipo List, por isso utilizamos classes que implementam a interface List, como:
 
 - **`ArrayList`**: Melhor desempenho para acesso direto e leitura rápida.  
 - **`LinkedList`**: Melhor para inserções e remoções frequentes em qualquer posição.  
 
+
+
 ![alt text](image-1.png)
 
-Acima temos a imagem de uma lista encadeada onde cada elemento da lista possuiu um nó (nodo) que aponta para o proximo elemento da lista.
-
+Acima temos a imagem de uma lista encadeada onde cada elemento da lista possuiu um nó (nodo) que aponta para o proximo elemento da lista, até o ultimo elemento que aponta para null.
 
 
 ### **Exemplo de declaração e instanciação:**
