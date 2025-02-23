@@ -483,6 +483,12 @@ Em Java, a **interface `List`** define o comportamento das listas. Ela é implem
 - **`ArrayList`**: Melhor desempenho para acesso direto e leitura rápida.  
 - **`LinkedList`**: Melhor para inserções e remoções frequentes em qualquer posição.  
 
+<img src="images/list1.png" alt="Representação de um array em Java" width="500">
+
+Acima temos a imagem de uma lista encadeada onde cada elemento da lista possuiu um nó (nodo) que aponta para o proximo elemento da lista.
+
+
+
 ### **Exemplo de declaração e instanciação:**
 
 ```java
