@@ -356,3 +356,165 @@ Total: 3000.0
 
 ---
 
+# **Laço "for each" em Java**
+
+## **Introdução**
+
+O laço **"for each"** é uma estrutura de repetição em Java que oferece uma forma **simplificada e legível** para percorrer elementos de **coleções** e **arrays**. Ele é especialmente útil quando você deseja acessar todos os elementos de uma coleção **sem se preocupar com índices**.
+
+## **Sintaxe**
+
+```java
+for (Tipo elemento : coleção) {
+    // comandos a serem executados para cada elemento
+}
+```
+
+- **Tipo:** Tipo dos elementos da coleção ou array.
+- **elemento:** Nome da variável que representará cada item da coleção em cada iteração.
+- **coleção:** Estrutura de dados a ser percorrida (array, `ArrayList`, `Set`, entre outros).
+
+## **Diferença entre o `for` tradicional e o `for each`**
+
+### **Exemplo com `for` tradicional:**
+
+```java
+String[] nomes = {"Maria", "Bob", "Alex"};
+
+for (int i = 0; i < nomes.length; i++) {
+    System.out.println(nomes[i]);
+}
+```
+
+- O `for` tradicional usa um **índice** para acessar elementos.
+- Você precisa gerenciar o índice `i` e verificar a condição de parada `i < nomes.length`.
+
+---
+
+### **Exemplo com `for each`:**
+
+```java
+String[] nomes = {"Maria", "Bob", "Alex"};
+
+for (String nome : nomes) {
+    System.out.println(nome);
+}
+```
+
+- **Leitura:** "Para cada `String nome` em `nomes`, execute o bloco de código."
+- Mais **limpo** e **legível**, sem necessidade de gerenciar índices.
+- Menor chance de erros como **`ArrayIndexOutOfBoundsException`**.
+
+---
+
+## **Quando usar o `for each`?**
+
+- Quando você precisa apenas **acessar** e **ler** os elementos de uma coleção ou array.
+- Quando não é necessário modificar o conteúdo da coleção diretamente pelo índice.
+- Ao trabalhar com estruturas como **arrays**, **listas (`List`)**, **conjuntos (`Set`)**, e **mapas (`Map`)** (para mapas, utiliza-se métodos específicos).
+
+---
+
+## **Exemplos Práticos**
+
+### **Exemplo 1: Percorrendo um array de inteiros**
+
+```java
+int[] numeros = {1, 2, 3, 4, 5};
+
+for (int numero : numeros) {
+    System.out.println(numero);
+}
+```
+
+**Saída:**
+```
+1
+2
+3
+4
+5
+```
+
+---
+
+### **Exemplo 2: Percorrendo uma lista (`ArrayList`)**
+
+```java
+import java.util.ArrayList;
+
+public class Demo {
+    public static void main(String[] args) {
+        ArrayList<String> frutas = new ArrayList<>();
+        frutas.add("Maçã");
+        frutas.add("Banana");
+        frutas.add("Laranja");
+
+        for (String fruta : frutas) {
+            System.out.println(fruta);
+        }
+    }
+}
+```
+
+**Saída:**
+```
+Maçã
+Banana
+Laranja
+```
+
+---
+
+### **Exemplo 3: Diferença prática com `for` tradicional**
+
+```java
+String[] cores = {"Azul", "Verde", "Vermelho"};
+
+// Com for tradicional
+for (int i = 0; i < cores.length; i++) {
+    System.out.println(cores[i]);
+}
+
+// Com for each
+for (String cor : cores) {
+    System.out.println(cor);
+}
+```
+
+Ambos produzem a mesma saída, mas o `for each` é mais legível e menos propenso a erros.
+
+---
+
+## **Limitações do `for each`**
+
+- Não permite acessar o **índice** atual diretamente. Se precisar do índice, use o `for` tradicional.
+- Não é possível **remover elementos** de uma coleção enquanto a percorre (use iteradores para isso).
+- Não permite **alterar diretamente** os valores dos elementos primitivos em arrays.
+
+---
+
+## **Exemplo com tentativa de modificação (não funciona como esperado)**
+
+```java
+int[] numeros = {1, 2, 3};
+
+for (int numero : numeros) {
+    numero += 10;  // Isso não altera o array original
+}
+
+for (int numero : numeros) {
+    System.out.println(numero);  // Saída: 1, 2, 3 (não 11, 12, 13)
+}
+```
+
+Para modificar elementos, use o `for` tradicional com índices.
+
+---
+
+## **Conclusão**
+
+- O laço **`for each`** é ideal para **percorrer coleções e arrays** de forma **simples e legível**.  
+- **Use o `for each`** quando não precisar de um índice ou modificar diretamente a coleção.  
+- **Use o `for` tradicional** quando for necessário acessar o índice, modificar valores ou ter mais controle sobre a iteração.
+
