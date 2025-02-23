@@ -470,6 +470,8 @@ Uma **lista** é uma estrutura de dados que armazena uma coleção de elementos 
 ### **Características das listas:**
 - **Homogênea:** Armazena dados do mesmo tipo.  
 - **Ordenada:** Os elementos são mantidos em ordem de inserção e podem ser acessados por posições (índices).  
+
+### Vantagens
 - **Tamanho variável:** Diferente de arrays, o tamanho pode crescer ou diminuir conforme necessário.  
 - **Alocação sob demanda:** Começa vazia e aloca espaço conforme elementos são adicionados.  
 - **Facilidade de inserção e remoção:** Inserir ou remover elementos é mais simples em comparação a arrays.  
