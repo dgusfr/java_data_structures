@@ -485,7 +485,6 @@ Não é possível instanciar o tipo List, por isso utilizamos classes que implem
 - **`LinkedList`**: Melhor para inserções e remoções frequentes em qualquer posição.  
 
 
-
 ![alt text](image-1.png)
 
 Acima temos a imagem de uma lista encadeada onde cada elemento da lista possuiu um nó (nodo) que aponta para o proximo elemento da lista, até o ultimo elemento que aponta para null.
