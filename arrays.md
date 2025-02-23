@@ -496,24 +496,6 @@ Ambos produzem a mesma saída, mas o `for each` é mais legível e menos propens
 
 ---
 
-## **Exemplo com tentativa de modificação (não funciona como esperado)**
-
-```java
-int[] numeros = {1, 2, 3};
-
-for (int numero : numeros) {
-    numero += 10;  // Isso não altera o array original
-}
-
-for (int numero : numeros) {
-    System.out.println(numero);  // Saída: 1, 2, 3 (não 11, 12, 13)
-}
-```
-
-Para modificar elementos, use o `for` tradicional com índices.
-
----
-
 ## **Conclusão**
 
 - O laço **`for each`** é ideal para **percorrer coleções e arrays** de forma **simples e legível**.  
