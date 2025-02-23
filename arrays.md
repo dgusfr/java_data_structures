@@ -476,9 +476,6 @@ Uma **lista** é uma estrutura de dados que armazena uma coleção de elementos 
 - **Alocação sob demanda:** Começa vazia e aloca espaço conforme elementos são adicionados.  
 - **Facilidade de inserção e remoção:** Inserir ou remover elementos é mais simples em comparação a arrays.  
 
-### Desvantagens
-- **Acesso sequencial** É necessario navegar do primeiro ao nó desejado sempre que precisar acessar um elemento.
-
 ---
 
 ## **2. Interface `List` e Implementações**
