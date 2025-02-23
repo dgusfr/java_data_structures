@@ -453,3 +453,13 @@ for (int numero : numeros) {
 - **Use o `for each`** quando não precisar de um índice ou modificar diretamente a coleção.  
 - **Use o `for` tradicional** quando for necessário acessar o índice, modificar valores ou ter mais controle sobre a iteração.
 
+---
+
+<br>
+<br>
+<br>
+
+---
+
+
+
