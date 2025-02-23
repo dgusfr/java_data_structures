@@ -437,7 +437,6 @@ for (int numero : numeros) {
 4
 5
 ```
-
 ---
 
 ## **Limitações do `for each`**
