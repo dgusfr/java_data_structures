@@ -18,6 +18,23 @@ public class ListProgram {
 			System.out.println(name);
 		}
 		
+		System.out.println("-----------");
+		System.out.println(list.size());
+		list.add(2, "Marcos");
+		for(String name : list) {
+			System.out.println(name);
+		}
+		
+		
+		System.out.println("-----------");
+		list.remove(1);
+		for(String name : list) {
+			System.out.println(name);
+		}
+
+		
+		
+		
 	}
 
 }
