@@ -1,3 +1,5 @@
+# Estrutura de dados em Java
+
 # Arrays em Java
 
 Em Java, **arrays** são estruturas homogêneas (mesmo tipo) que armazenam diversos elementos usando uma única referência. São **contíguos na memória**, de **tamanho fixo** e **indexados** a partir de 0.
