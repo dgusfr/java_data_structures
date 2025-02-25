@@ -907,4 +907,3 @@ Use matrizes quando:
 - Os dados possuem **dimensão fixa** e conhecida previamente.  
 
 ---
-
