@@ -908,12 +908,5 @@ Use matrizes quando:
 
 ---
 
-## **9. Conclusão**
-
-- **Matrizes** são essenciais para representar dados em **duas dimensões**.  
-- Permitem **armazenar, acessar e manipular dados** de forma ordenada e eficiente.  
-- Apesar de **acesso rápido**, matrizes possuem **tamanho fixo** e não são práticas para dados com tamanho variável.  
-
-Ao dominar matrizes, você estará preparado para resolver problemas envolvendo tabelas, matrizes matemáticas e manipulação de dados estruturados em duas dimensões.
 
 ---
