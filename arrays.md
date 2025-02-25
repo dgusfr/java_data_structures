@@ -1,5 +1,76 @@
 # Estrutura de dados em Java
 
+# **Sumário**
+
+1. **Estrutura de Dados em Java**  
+2. **Arrays**  
+   2.1. Motivação  
+   2.2. Declaração e Instanciação  
+   2.3. Acessando Elementos  
+   2.4. Populando e Percorrendo Arrays  
+   - 2.4.1. For Tradicional  
+   - 2.4.2. Propriedade `length`  
+   - 2.4.3. Enhanced `for` (Java 5+)  
+   2.5. Arrays de Tipos Primitivos vs. Arrays de Objetos  
+   - 2.5.1. Arrays de Tipos Primitivos  
+   - 2.5.2. Arrays de Objetos (Referências)  
+   2.6. Arrays com Herança  
+   2.7. Tamanho Fixo e Redimensionamento  
+
+3. **Memória em Arrays de Java**  
+   3.1. Stack e Heap  
+   3.2. Organização da Memória  
+   3.3. Exemplo Visual  
+
+4. **Boxing, Unboxing e Wrapper Classes em Java**  
+   4.1. Introdução  
+   4.2. Boxing  
+   4.3. Unboxing  
+   4.4. Wrapper Classes  
+   4.5. Exemplo Prático com Boxing e Unboxing  
+   4.6. Uso Prático em Sistemas de Informação  
+   4.7. Resumo  
+
+5. **Laço `for each`**  
+   5.1. Introdução  
+   5.2. Sintaxe  
+   5.3. Diferença entre `for` tradicional e `for each`  
+   5.4. Exemplos Práticos  
+   5.5. Quando usar o `for each`  
+   5.6. Limitações  
+   5.7. Conclusão  
+
+6. **Listas em Java**  
+   6.1. Conceito de Lista  
+   - 6.1.1. Vantagens  
+   - 6.1.2. Desvantagens  
+   6.2. Interface `List` e Implementações  
+   6.3. Operações Básicas com Listas  
+   - 6.3.1. Inserir Elementos: `add()`  
+   - 6.3.2. Obter Tamanho: `size()`  
+   - 6.3.3. Acessar Elementos: `get(position)`  
+   - 6.3.4. Percorrer a Lista  
+   - 6.3.5. Remover Elementos: `remove()` e `removeIf()`  
+   - 6.3.6. Encontrar Posições: `indexOf()` e `lastIndexOf()`  
+   6.4. Trabalhando com Streams e Filtros  
+   - 6.4.1. Filtrar Elementos com `stream()` e `filter()`  
+   - 6.4.2. Encontrar Primeira Ocorrência com `findFirst()`  
+   6.5. Código Completo com Demonstração  
+   6.6. Vantagens e Desvantagens das Listas  
+   6.7. Conclusão  
+
+7. **Matrizes em Java**  
+   7.1. O que é uma Matriz?  
+   - 7.1.1. Características  
+   - 7.1.2. Exemplo Visual  
+   7.2. Declaração e Instanciação  
+   7.3. Acesso aos Elementos  
+   7.4. Como Percorrer uma Matriz  
+   7.5. Propriedade `length`  
+   7.6. Exemplo Completo  
+   7.7. Vantagens e Desvantagens das Matrizes  
+   7.8. Quando usar Matrizes?
+
 # Arrays 
 
 Em Java, **arrays** são estruturas homogêneas (mesmo tipo) que armazenam diversos elementos usando uma única referência. São **contíguos na memória**, de **tamanho fixo** e **indexados** a partir de 0.
