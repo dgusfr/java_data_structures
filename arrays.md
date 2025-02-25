@@ -813,6 +813,8 @@ System.out.println(matriz[1][2]);  // Exibe: 7.5
 
 ---
 
+<br>
+
 ## **4. Como Percorrer uma Matriz**
 
 Para percorrer uma matriz e acessar todos os elementos, geralmente utilizamos **laços `for` aninhados**:
