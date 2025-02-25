@@ -736,3 +736,5 @@ null
   - Use **`ArrayList`** quando precisar de acesso rápido e leituras frequentes.  
   - Use **`LinkedList`** quando inserções e remoções forem mais frequentes.
 
+---
+
