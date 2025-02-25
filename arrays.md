@@ -762,6 +762,8 @@ Para acessar o valor `7.5`, utilizamos o índice da linha e da coluna: `matriz[1
 
 ---
 
+<br>
+
 ## **2. Declaração e Instanciação de Matrizes em Java**
 
 Para utilizar matrizes em Java, é necessário **declarar** e **instanciar** a matriz.
@@ -787,6 +789,8 @@ No momento da criação:
 - Tipos referência (ex.: `String`) são inicializados com `null`.  
 
 ---
+
+<br>
 
 ## **3. Acesso aos Elementos**
 
