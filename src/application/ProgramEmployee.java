@@ -35,12 +35,30 @@ public class ProgramEmployee {
         }
 		
 		System.out.println("Enter the employee id that will have salary increase:");
-        if(employees.stream() != null) {
-        	
-        	
-        }
-		System.out.println("Enter the percentage:");
-
+		int idToIncrease = sc.nextInt();
+		
+		Employee emp = null;
+		for(Employee e : employees) {
+			if(e.getId() == idToIncrease) {
+				emp = e;
+				break;
+			}
+		}
+		
+		if (emp == null) {
+			System.out.println("This id does not exist!");
+		}else {
+			System.out.println("Enter the percentage: ");
+			double percentage = sc.nextDouble();
+			emp.increaseSalary(percentage);
+		}
+		
+		System.out.println("List of employees:");
+		for(Employee e : employees) {
+			System.out.println(e);
+		}
+		
+		sc.close();
 	}
 
 }

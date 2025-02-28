@@ -11,27 +11,24 @@ public class Employee {
         this.salary = salary;   
     }
 
-	public int getId() {
-		return id;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getName() {
-		return name;
+    public Double getSalary() {
+        return salary;
+    }
+	
+	public void increaseSalary(double percentage) {
+		this.salary += salary * (percentage/100);
 	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public double getSalary() {
-		return salary;
-	}
-
-	public void setSalary(double salary) {
-		this.salary = salary;
-	}
+	
+    @Override
+    public String toString() {
+        return id + ", " + name + ", " + String.format("%.2f", salary);
+    }
 }
