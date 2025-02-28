@@ -11,10 +11,7 @@ public class ProgramEmployee {
 		Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("How many employees will be registered?");
-        int n = sc.nextInt();
-        
-        List<String> employees = new ArrayList<>();
+        List<Employee> employees = new ArrayList<>();
 		
 		for(String employee : employees) {
 			System.out.println("Employee #");
