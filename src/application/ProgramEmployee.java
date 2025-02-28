@@ -24,6 +24,10 @@ public class ProgramEmployee {
 		}
 		
 		System.out.println("Enter the employee id that will have salary increase:");
+        if(employees.stream() != null) {
+        	
+        	
+        }
 		System.out.println("Enter the percentage:");
 
 	}
