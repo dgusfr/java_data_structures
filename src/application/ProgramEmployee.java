@@ -12,6 +12,9 @@ public class ProgramEmployee {
         Scanner sc = new Scanner(System.in);
         
         List<Employee> employees = new ArrayList<>();
+        
+        System.out.println("How many employees will be registered?");
+        int n = sc.nextInt();
 		
 		for(String employee : employees) {
 			System.out.println("Employee #");
