@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entities.Employee;
+
 public class ProgramEmployee {
 
 	public static void main(String[] args) {
@@ -19,13 +21,17 @@ public class ProgramEmployee {
         for(int i = 0; i < n; i++) {
         	System.out.println("Employee #" + (i + 1) + ":");
         	
+        	System.out.println("Id:");
+        	int id = sc.nextInt();
+        	sc.nextLine();
         	
+        	System.out.println("Name:");
+        	String name = sc.nextLine();
         	
+        	System.out.println("Salary: ");
+        	double salary = sc.nextDouble();
         	
-        	
-        	
-        	
-        	
+        	employees.add(new Employee(id, name, salary));
         }
 		
 		System.out.println("Enter the employee id that will have salary increase:");
