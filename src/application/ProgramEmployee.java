@@ -16,12 +16,16 @@ public class ProgramEmployee {
         System.out.println("How many employees will be registered?");
         int n = sc.nextInt();
 		
-		for(String employee : employees) {
-			System.out.println("Employee #");
-			System.out.println("Id:");
-			System.out.println("Name:");
-			System.out.println("Salary:");
-		}
+        for(int i = 0; i < n; i++) {
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        }
 		
 		System.out.println("Enter the employee id that will have salary increase:");
         if(employees.stream() != null) {
