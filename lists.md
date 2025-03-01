@@ -1,6 +1,3 @@
-Aqui está o documento com o sumário interativo para listas em Java:
-
-```markdown
 # **Sumário Interativo**
 
 - [Listas em Java](#listas-em-java)
