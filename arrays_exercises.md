@@ -154,5 +154,3 @@ Esse recurso também funciona quando não conhecemos o tamanho exato do array pr
    Se a array estiver cheia ao adicionar um novo `Funcionario`, crie uma **nova array maior** e copie os valores antigos. Isso simula “crescer” dinamicamente.
 
 ---
-
-Dessa forma, encerramos o capítulo sobre **arrays** em Java, demonstrando como declarar, instanciar, popular e percorrer arrays, bem como indicando alguns exercícios práticos para fixar os conceitos.
