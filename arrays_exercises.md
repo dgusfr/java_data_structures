@@ -15,29 +15,7 @@ Maquiavel
 
 ### **5.1 – O problema inicial**
 
-Quando precisamos armazenar diversas variáveis do mesmo tipo, em vez de criá-las uma a uma:
 
-```java
-int idade1;
-int idade2;
-int idade3;
-int idade4;
-```
-
-Podemos declarar um **array**:
-
-```java
-int[] idades;  // tipo int[]
-idades = new int[10]; // array de 10 posições
-```
-
-Agora podemos acessar cada posição pelo **índice**, que vai de 0 até `n-1`, onde `n` é o tamanho do array. Por exemplo:
-
-```java
-idades[5] = 10; // altera a 6ª posição do array
-```
-
-Se tentarmos acessar uma posição fora desse intervalo, ocorrerá um erro de execução (out of bounds).
 
 ---
 
