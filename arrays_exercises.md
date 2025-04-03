@@ -19,24 +19,7 @@ Maquiavel
 
 ---
 
-### **5.2 – Arrays de referências**
-
-Quando criamos um **array de objetos**, estamos na verdade criando um array de **referências** (endereços) para objetos. Por exemplo:
-
-```java
-Conta[] minhasContas;
-minhasContas = new Conta[10];
-```
-
-Isso cria 10 espaços para referências a `Conta`, mas **nenhuma Conta é criada** ainda. Se tentarmos acessar `minhasContas[0].saldo` antes de instanciar uma conta, teremos erro em tempo de execução. Precisamos primeiro popular o array:
-
-```java
-minhasContas[0] = new Conta();
-minhasContas[0].saldo = 1000.0;
-```
-
-Ao usar um **array de tipos primitivos**, guardamos valores. Em um **array de objetos**, guardamos apenas as referências.
-
+#
 ---
 
 ### **5.3 – Percorrendo uma array**
