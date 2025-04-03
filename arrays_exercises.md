@@ -19,16 +19,16 @@
    ```
    Decida como identificar a próxima posição vazia: usar um **contador** ou **procurar uma posição nula**.
 
-3. **Criar instâncias e adicionar**  
+## 3. **Criar instâncias e adicionar**  
    Em outra classe com `main`, instancie alguns `Funcionario` e adicione-os à `Empresa`. Não se esqueça de **inicializar** a array de `Funcionario` antes, por exemplo:  
    ```java
    empresa.funcionarios = new Funcionario[10];
    ```
 
-4. **Percorrer e imprimir**  
+## 4. **Percorrer e imprimir**  
    Percorra a array de `Funcionario` na classe `Empresa` e **imprima** salários, ou chame um método `mostra()` de cada `Funcionario`. Cuidado com posições vazias (`null`).
 
-5. **(Opcional) Método `contem`**  
+## 5. **(Opcional) Método `contem`**  
    Implemente um método para verificar se um determinado `Funcionario` se encontra na array:  
    ```java
    boolean contem(Funcionario f) {
@@ -36,7 +36,7 @@
    }
    ```
 
-6. **(Opcional) Realocação**  
+## 6. **(Opcional) Realocação**  
    Se a array estiver cheia ao adicionar um novo `Funcionario`, crie uma **nova array maior** e copie os valores antigos. Isso simula “crescer” dinamicamente.
 
 ---
