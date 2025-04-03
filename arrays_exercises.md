@@ -1,4 +1,4 @@
-### **5.6 – Exercícios**
+### **Exercícios**
 
 1. **Classe Empresa**  
    Crie uma classe `Empresa` com atributos como **nome**, **cnpj**, e uma **array de `Funcionario`**.  
