@@ -1,6 +1,6 @@
 # **Exercícios**
 
-1. **Classe Empresa**  
+## 1. **Classe Empresa**  
    Crie uma classe `Empresa` com atributos como **nome**, **cnpj**, e uma **array de `Funcionario`**.  
    ```java
    class Empresa {
@@ -10,7 +10,7 @@
    }
    ```
 
-2. **Método `adiciona`**  
+## 2. **Método `adiciona`**  
    A `Empresa` precisa de um método:
    ```java
    void adiciona(Funcionario f) {
