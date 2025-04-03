@@ -47,15 +47,30 @@ Em Java, **arrays** são estruturas homogêneas (mesmo tipo) que armazenam diver
 
 <img src="images/array.png" alt="Representação de um array em Java" width="500">
 
----
 
-Sem arrays, teríamos que armazenar dados em várias variáveis separadas:
+Quando precisamos armazenar diversas variáveis do mesmo tipo, em vez de criá-las uma a uma:
+
 ```java
-double saldoConta1 = conta1.getSaldo();
-double saldoConta2 = conta2.getSaldo();
-double saldoConta3 = conta3.getSaldo();
+int idade1;
+int idade2;
+int idade3;
+int idade4;
 ```
-Isso é pouco prático. Com arrays, unificamos as variáveis em uma única estrutura.
+
+Podemos declarar um **array**:
+
+```java
+int[] idades;  // tipo int[]
+idades = new int[10]; // array de 10 posições
+```
+
+Agora podemos acessar cada posição pelo **índice**, que vai de 0 até `n-1`, onde `n` é o tamanho do array. Por exemplo:
+
+```java
+idades[5] = 10; // altera a 6ª posição do array
+```
+
+Se tentarmos acessar uma posição fora desse intervalo, ocorrerá um erro de execução (out of bounds).
 
 <br>
 
